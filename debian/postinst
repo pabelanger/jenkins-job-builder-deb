@@ -20,7 +20,6 @@ set -e
 
 case "$1" in
 	configure)
-		chown -R jenkins:jenkins /etc/jenkins_jobs
 		chmod 0640 /etc/jenkins_jobs/jenkins_jobs.ini
 		chmod 0750 /etc/jenkins_jobs
 	;;

@@ -14,8 +14,7 @@ Standards-Version: 3.9.3
 
 Package: jenkins-job-builder
 Architecture: all
-Depends: jenkins (>= 1.426),
- python-jenkins,
+Depends: python-jenkins,
  python-yaml,
  ${misc:Depends},
  ${python:Depends}
