@@ -11,9 +11,9 @@ override_dh_auto_build:
 	python setup.py build_sphinx
 
 override_dh_install:
-	dh_install
 	install -D -m 0640 $(CURDIR)/etc/jenkins_jobs.ini-sample \
 		$(CURDIR)/debian/jenkins-job-builder/etc/jenkins_jobs/jenkins_jobs.ini
+	dh_install
 
 get-orig-source:
 	@@[ -d ../tarballs/. ] || mkdir -p ../tarballs
