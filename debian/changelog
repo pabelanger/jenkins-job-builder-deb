@@ -1,5 +1,5 @@
-jenkins-job-builder (0.0.191.a28c629-1) UNRELEASED; urgency=low
+jenkins-job-builder (0.1.0-1) UNRELEASED; urgency=low
 
-  * Initial release
+  * Initial release (Closes: #693145)
 
  -- Paul Belanger <paul.belanger@polybeacon.com>  Mon, 12 Nov 2012 11:50:59 -0500
