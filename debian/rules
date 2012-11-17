@@ -16,5 +16,4 @@ override_dh_install:
 	dh_install
 
 get-orig-source:
-	@@[ -d ../tarballs/. ] || mkdir -p ../tarballs
-	uscan --verbose --force-download --rename --destdir=../tarballs
+	uscan --noconf --force-download --rename --repack --destdir=.
