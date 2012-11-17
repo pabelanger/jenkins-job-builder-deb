@@ -1,2 +1,2 @@
 version=3
-http://tarballs.openstack.org/jenkins-job-builder/jenkins-job-builder-(\d.+).tar.gz debian
+http://tarballs.openstack.org/jenkins-job-builder/jenkins-job-builder-(\d.\d.\d).tar.gz debian
