@@ -3,16 +3,16 @@ Maintainer: Paul Belanger <paul.belanger@polybeacon.com>
 Section: python
 Priority: optional
 Build-Depends:
- debhelper (>= 8.0.0),
- python (>= 2.6)
+ debhelper (>= 9),
+ python-all (>= 2.6.6-3)
 Build-Depends-Indep:
  python-jenkins,
  python-setuptools,
  python-sphinx,
  python-yaml
-X-Python-Version: >= 2.6
 Standards-Version: 3.9.3
-Homepage: http://ci.openstack.org/jenkins-job-builder/
+X-Python-Version: >= 2.6
+Homepage: http://ci.openstack.org/jenkins-job-builder
 Vcs-Git: git://github.com/pabelanger/jenkins-job-builder-deb.git
 Vcs-Browser: https://github.com/pabelanger/jenkins-job-builder-deb
 
