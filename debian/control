@@ -19,7 +19,9 @@ Architecture: all
 Depends: python-jenkins,
  python-yaml,
  ${misc:Depends},
- ${python:Depends}
+ ${python:Depends},
+ libjs-jquery,
+ libjs-underscore
 Description: Configure Jenkins using YAML files
  Jenkins Job Builder takes simple descriptions of Jenkins jobs in YAML format,
  and uses them to configure Jenkins. You can keep your job descriptions in
