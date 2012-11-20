@@ -10,6 +10,10 @@ override_dh_auto_build:
 	dh_auto_build
 	$(MAKE) -C doc html man BUILDDIR=$(CURDIR)/build/docs
 
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -rf jenkins_job_builder.egg-info
+
 override_dh_auto_install:
 	dh_auto_install -- --install-lib=/usr/share/jenkins-job-builder
 
