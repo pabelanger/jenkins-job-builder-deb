@@ -1,6 +1,5 @@
-jenkins-job-builder (0.3.0-1) UNRELEASED; urgency=low
+jenkins-job-builder (0.3.0-1) unstable; urgency=low
 
-  * NOT RELEASE YET
   * Initial release (Closes: #693145)
 
- -- Paul Belanger <paul.belanger@polybeacon.com>  Tue, 20 Nov 2012 14:24:12 -0500
+ -- Paul Belanger <paul.belanger@polybeacon.com>  Tue, 20 Nov 2012 16:07:22 -0500
