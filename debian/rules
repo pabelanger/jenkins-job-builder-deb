@@ -15,5 +15,8 @@ override_dh_install:
 		$(CURDIR)/debian/tmp/etc/jenkins_jobs/jenkins_jobs.ini
 	dh_install
 
+override_dh_installchangelogs:
+	dh_installchangelogs ChangeLog
+
 get-orig-source:
 	uscan --noconf --force-download --rename --repack --destdir=.
