@@ -5,4 +5,3 @@
 # Overwrite underscore.js from upstream tarball with a link to underscore.min.js
 # provided by Underscore Debian package
 /usr/share/javascript/underscore/underscore.min.js usr/share/doc/jenkins-job-builder/html/_static/underscore.js
-
