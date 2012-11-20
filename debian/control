@@ -16,12 +16,13 @@ Vcs-Browser: https://github.com/pabelanger/jenkins-job-builder-deb
 
 Package: jenkins-job-builder
 Architecture: all
-Depends: python-jenkins,
+Depends: libjs-jquery,
+ libjs-underscore,
+ python-jenkins,
  python-yaml,
  ${misc:Depends},
  ${python:Depends},
- libjs-jquery,
- libjs-underscore
+ ${sphinxdoc:Depends}
 Description: Configure Jenkins using YAML files
  Jenkins Job Builder takes simple descriptions of Jenkins jobs in YAML format,
  and uses them to configure Jenkins. You can keep your job descriptions in

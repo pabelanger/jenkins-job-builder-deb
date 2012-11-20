@@ -4,11 +4,11 @@
 #export DH_VERBOSE=1
 
 %:
-	dh $@ --with python2
+	dh $@ --with python2,sphinxdoc
 
 override_dh_auto_build:
 	dh_auto_build
-	python setup.py build_sphinx
+	$(MAKE) -C doc html man BUILDDIR=$(CURDIR)/build/docs
 
 override_dh_install:
 	install -D -m 0640 $(CURDIR)/etc/jenkins_jobs.ini-sample \
