@@ -1,8 +1,13 @@
-jenkins-job-builder (0.3.0-2) UNRELEASED; urgency=low
+jenkins-job-builder (0.4.0-1) UNRELEASED; urgency=low
 
   * NOT YET RELEASED
+  * New upstream release
+  * debian/patches: Add upstream fixes for packaging
+    - 0001-Documentation-fixes-to-make-Sphinx-happy.patch
+    - 0002-Remove-setuptools-git-from-setup.py.patch
+  * Bump standards to 3.9.4
 
- -- Paul Belanger <paul.belanger@polybeacon.com>  Wed, 09 Jan 2013 12:59:17 -0500
+ -- Paul Belanger <paul.belanger@polybeacon.com>  Wed, 30 Jan 2013 20:29:25 -0500
 
 jenkins-job-builder (0.3.0-1) unstable; urgency=low
 

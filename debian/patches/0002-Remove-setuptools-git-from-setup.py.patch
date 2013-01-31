@@ -1,0 +1,39 @@
+From 6cbb416e2096796b03a4cbcf79a41913e8f4d515 Mon Sep 17 00:00:00 2001
+From: "James E. Blair" <jeblair@openstack.org>
+Date: Wed, 16 Jan 2013 18:07:14 -0800
+Subject: [PATCH 2/2] Remove setuptools-git from setup.py.
+
+Put it in test-requires so it's there when we build a tarball.
+Change-Id: I8a5adec74beeb397e71e17030338a8051fe6fb0b
+Reviewed-on: https://review.openstack.org/19885
+Reviewed-by: Clark Boylan <clark.boylan@gmail.com>
+Reviewed-by: Jeremy Stanley <fungi@yuggoth.org>
+Approved: Clark Boylan <clark.boylan@gmail.com>
+Tested-by: Jenkins
+---
+ setup.py            |    1 -
+ tools/test-requires |    1 +
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index ca4dd2a..5a563c6 100644
+--- a/setup.py
++++ b/setup.py
+@@ -34,7 +34,6 @@ setuptools.setup(
+     include_package_data=True,
+     cmdclass=setup.get_cmdclass(),
+     install_requires=requires,
+-    setup_requires=['setuptools_git>=0.4'],
+     dependency_links=depend_links,
+     zip_safe=False,
+     classifiers=[
+diff --git a/tools/test-requires b/tools/test-requires
+index 6966869..5a74ecc 100644
+--- a/tools/test-requires
++++ b/tools/test-requires
+@@ -1 +1,2 @@
+ sphinx
++setuptools_git>=0.4
+-- 
+1.7.9.5
+

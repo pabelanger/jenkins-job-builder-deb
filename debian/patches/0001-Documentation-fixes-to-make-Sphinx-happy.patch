@@ -1,0 +1,96 @@
+From 656915f66d159f0e2ff3ba7846d87604e6a793ef Mon Sep 17 00:00:00 2001
+From: Paul Belanger <paul.belanger@polybeacon.com>
+Date: Wed, 16 Jan 2013 22:18:27 -0500
+Subject: [PATCH] Documentation fixes to make Sphinx happy
+
+On this note, we have an issue with our current gate test for
+documentation not properly catching these issues.  I'll be attempting to
+address the issue in a future patch.
+
+Change-Id: I7d0bea70ef98d1744200815ce12f1436729349e8
+Signed-off-by: Paul Belanger <paul.belanger@polybeacon.com>
+Reviewed-on: https://review.openstack.org/19889
+Reviewed-by: Clark Boylan <clark.boylan@gmail.com>
+Reviewed-by: James E. Blair <corvus@inaugust.com>
+Approved: James E. Blair <corvus@inaugust.com>
+Tested-by: Jenkins
+---
+ doc/source/configuration.rst     |    2 ++
+ doc/source/general.rst           |    4 ++--
+ jenkins_jobs/modules/wrappers.py |   22 ++++++++++++----------
+ 3 files changed, 16 insertions(+), 12 deletions(-)
+
+diff --git a/doc/source/configuration.rst b/doc/source/configuration.rst
+index cee8d5b..01fd2ae 100644
+--- a/doc/source/configuration.rst
++++ b/doc/source/configuration.rst
+@@ -259,6 +259,8 @@ the generic macro ``add``.  Whenever you forget a parameter from a macro,
+ it will not be expanded and left as is, which will most probably cause havoc in
+ your Jenkins builds.
+ 
++.. _defaults:
++
+ Defaults
+ ^^^^^^^^
+ 
+diff --git a/doc/source/general.rst b/doc/source/general.rst
+index 9e6d7d8..206cd33 100644
+--- a/doc/source/general.rst
++++ b/doc/source/general.rst
+@@ -28,9 +28,9 @@ later.  There are a few basic optional fields for a Job definition::
+       Defaults to "freestyle", but "maven" can also be specified.
+ 
+     * **defaults**:
+-      Specifies a set of `Defaults`_ to use for this job, defaults to
++      Specifies a set of :ref:`defaults` to use for this job, defaults to
+       ''global''.  If you have values that are common to all of your jobs,
+-      create a ``global`` `Defaults`_ object to hold them, and no further
++      create a ``global`` :ref:`defaults` object to hold them, and no further
+       configuration of individual jobs is necessary.  If some jobs
+       should not use the ``global`` defaults, use this field to specify a
+       different set of defaults.
+diff --git a/jenkins_jobs/modules/wrappers.py b/jenkins_jobs/modules/wrappers.py
+index 6a93176..71caf6c 100644
+--- a/jenkins_jobs/modules/wrappers.py
++++ b/jenkins_jobs/modules/wrappers.py
+@@ -276,6 +276,7 @@ def inject(parser, xml_parent, data):
+     :arg str script-content: contents of a script (default '')
+ 
+     Example::
++
+       wrappers:
+         - inject:
+             properties-file-path: /usr/local/foo
+@@ -309,18 +310,19 @@ def jclouds(parser, xml_parent, data):
+                                  the instance (default: False).
+ 
+     Example::
++
+       wrappers:
+         - jclouds:
+-          single-use: True
+-          instances:
+-            - jenkins-dev-slave:
+-                cloud-name: mycloud1
+-                count: 1
+-                stop-on-terminate: True
+-            - jenkins-test-slave:
+-                cloud-name: mycloud2
+-                count: 2
+-                stop-on-terminate: False
++            single-use: True
++            instances:
++              - jenkins-dev-slave:
++                  cloud-name: mycloud1
++                  count: 1
++                  stop-on-terminate: True
++              - jenkins-test-slave:
++                  cloud-name: mycloud2
++                  count: 2
++                  stop-on-terminate: False
+     """
+     buildWrapper = XML.SubElement(xml_parent,
+                                   'jenkins.plugins.jclouds.compute.'
+-- 
+1.7.9.5
+
