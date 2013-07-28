@@ -1,0 +1,58 @@
+From aa2e5c7d5992b2116b9b429d04320543ca70361e Mon Sep 17 00:00:00 2001
+From: Will Soula <william.soula@drillinginfo.com>
+Date: Wed, 10 Jul 2013 08:18:19 -0500
+Subject: [PATCH] Fixing documentation
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+The env-file documentation had the link for the plugin incorrect
+The jclouds documentation had no description nor link to the
+required plugin
+Doing make html in the doc folder complained about tfs in wrappers
+so I added a new line
+
+Change-Id: I61799c7a06d50486a08c31ba7db3d34965378e6f
+Reviewed-on: https://review.openstack.org/36464
+Reviewed-by: Leif Madsen <leif@leifmadsen.com>
+Reviewed-by: Mathieu Gagné <mgagne@iweb.com>
+Reviewed-by: Khai Do <zaro0508@gmail.com>
+Reviewed-by: James E. Blair <corvus@inaugust.com>
+Reviewed-by: Antoine Musso <hashar@free.fr>
+Approved: Clark Boylan <clark.boylan@gmail.com>
+Reviewed-by: Clark Boylan <clark.boylan@gmail.com>
+Tested-by: Jenkins
+---
+ jenkins_jobs/modules/scm.py      |    6 +++---
+ jenkins_jobs/modules/wrappers.py |    7 ++++++-
+ 2 files changed, 9 insertions(+), 4 deletions(-)
+
+--- a/jenkins_jobs/modules/scm.py
++++ b/jenkins_jobs/modules/scm.py
+@@ -309,9 +309,9 @@ def tfs(self, xml_parent, data):
+ 
+         :web-access value:
+             * **web-url** -- Enter the URL to the TSWA server. The plugin will
+-            strip the last path (if any) of the URL when building URLs for
+-            change set pages and other pages. (optional, default
+-            uses server-url)
++              strip the last path (if any) of the URL when building URLs for
++              change set pages and other pages. (optional, default
++              uses server-url)
+ 
+ 
+     Examples::
+--- a/jenkins_jobs/modules/wrappers.py
++++ b/jenkins_jobs/modules/wrappers.py
+@@ -301,6 +301,11 @@ def inject(parser, xml_parent, data):
+ 
+ def jclouds(parser, xml_parent, data):
+     """yaml: jclouds
++    Uses JClouds to provide slave launching on most of the currently
++    usable Cloud infrastructures.
++    Requires the Jenkins `JClouds Plugin.
++    <https://wiki.jenkins-ci.org/display/JENKINS/JClouds+Plugin>`_
++
+     :arg bool single-use: Whether or not to terminate the slave after use
+                           (default: False).
+     :arg list instances: The name of the jclouds template to create an
