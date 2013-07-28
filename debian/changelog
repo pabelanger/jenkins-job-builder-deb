@@ -1,4 +1,4 @@
-jenkins-job-builder (0.5.0-1) UNRELEASED; urgency=low
+jenkins-job-builder (0.5.0-1) unstable; urgency=low
 
   * New upstream release (Closes: #718126)
   * debian/patches: Merged upstream
@@ -7,7 +7,7 @@ jenkins-job-builder (0.5.0-1) UNRELEASED; urgency=low
   * debian/patches: Add upstream fixes for packaging
     - 0001-Fixing-documentation.patch
 
- -- Paul Belanger <paul.belanger@polybeacon.com>  Sun, 28 Jul 2013 10:30:52 -0400
+ -- Paul Belanger <paul.belanger@polybeacon.com>  Sun, 28 Jul 2013 10:32:09 -0400
 
 jenkins-job-builder (0.4.0-1) unstable; urgency=low
 
