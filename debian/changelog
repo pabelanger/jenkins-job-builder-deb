@@ -1,3 +1,9 @@
+jenkins-job-builder (0.5.0-2) UNRELEASED; urgency=low
+
+  * Move /usr/bin/jenkins-jobs into debian/links (Closes: #728585)
+
+ -- Paul Belanger <paul.belanger@polybeacon.com>  Mon, 04 Nov 2013 11:22:34 -0500
+
 jenkins-job-builder (0.5.0-1) unstable; urgency=low
 
   * New upstream release (Closes: #718126)
